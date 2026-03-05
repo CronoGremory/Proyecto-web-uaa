@@ -12,18 +12,17 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top custom-navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">LUIS PABLO MENDOZA | DEV</a>
+            <a class="navbar-brand fw-bold" href="#">LUIS PABLO MENDOZA | FULLSTACK</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#carrusel">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#apis">Web APIs</a></li>
                     <li class="nav-item"><a class="nav-link" href="#microservicios">Microservicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contenedorizacion">Contenedores</a></li>
                     <li class="nav-item"><a class="nav-link" href="#cloud">Cloud & .NET</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#validacion">Validación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#validacion">Registro Final</a></li>
                 </ul>
             </div>
         </div>
@@ -34,7 +33,7 @@
             <div class="carousel-item active">
                 <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1600&auto=format&fit=crop" class="d-block w-100 overlay-img" alt="Tecnología">
                 <div class="carousel-caption d-md-block slide-content">
-                    <h1 class="display-3 fw-bold">Ecosistemas Web APIs</h1>
+                    <h1 class="display-3 fw-bold">Desarrollo de Web APIs</h1>
                     <p class="lead">Interconectividad total bajo estándares REST, SOAP y seguridad JWT.</p>
                 </div>
             </div>
@@ -54,28 +53,26 @@
             <h2 class="section-title">Ecosistemas de Comunicación: Web APIs</h2>
             <div class="row g-4">
                 <div class="col-lg-8">
-                    <p>Una <strong>Web API</strong> es una interfaz de programación que permite a las aplicaciones compartir datos y comunicarse entre sí mediante el protocolo HTTP. Actúa como una capa de abstracción para que dos sistemas interactúen sin conocer su mecánica interna.</p>
-                    
-                    <h5 class="text-danger mt-4 fw-bold">Ejemplo Práctico: Uber y Google Maps</h5>
-                    <p>Cuando usas <strong>Uber</strong>, la aplicación consume la API de <strong>Google Maps</strong> para obtener geolocalización. Del mismo modo, un e-commerce utiliza pasarelas como <strong>PayPal</strong> para gestionar cobros electrónicos seguros.</p>
+                    <p>Una <strong>Web API</strong> es una interfaz de programación que permite a las aplicaciones compartir datos y comunicarse mediante el protocolo HTTP. Actúa como una capa intermedia para procesar transferencias entre sistemas.</p>
                     
                     <h5 class="text-danger mt-4 fw-bold">Paradigmas: REST vs SOAP</h5>
-                    <p><strong>SOAP:</strong> Es un protocolo basado en XML con reglas estrictas de seguridad y transaccionalidad, ideal para el sector financiero.</p>
-                    <p><strong>REST:</strong> Arquitectura moderna que utiliza <strong>JSON</strong> como formato estándar. Es la base de las aplicaciones móviles actuales porque permite almacenamiento en caché, optimizando el rendimiento.</p>
+                    <p><strong>SOAP:</strong> Protocolo basado en XML, independiente de plataforma, con reglas estrictas de seguridad (WS-Security).</p>
+                    <p><strong>REST:</strong> Estilo arquitectónico ligero que utiliza URIs y formatos como JSON. Es el estándar para conectar componentes en microservicios debido a su flexibilidad y capacidad de caché.</p>
                     
                     
 
-                    <h5 class="text-danger mt-4 fw-bold">Seguridad y Tokens JWT</h5>
-                    <p>En APIs privadas, se utiliza el <strong>JSON Web Token (JWT)</strong>. Es un estándar (RFC 7519) para transmitir información segura entre partes. Se compone de tres bloques fundamentales: Header, Payload y Signature.</p>
+                    <h5 class="text-danger mt-4 fw-bold">Desarrollo y Seguridad (JWT)</h5>
+                    <p>Para crear una API exitosa, se deben definir objetivos claros, documentar con herramientas como <strong>Swagger</strong> y versionar la interfaz. La seguridad se gestiona mediante <strong>JSON Web Token (JWT)</strong>, compuesto por Header, Payload y Signature, garantizando transmisiones íntegras y seguras.</p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 text-center">
                     <div class="card custom-card p-4 shadow border-0 h-100">
-                        <h5 class="fw-bold text-white mb-3">Métodos HTTP Críticos</h5>
-                        <ul class="list-group list-group-flush bg-transparent small text-white">
-                            <li class="list-group-item bg-transparent text-white border-secondary"><strong>GET:</strong> Solicitar información.</li>
-                            <li class="list-group-item bg-transparent text-white border-secondary"><strong>POST:</strong> Enviar nueva información.</li>
-                            <li class="list-group-item bg-transparent text-white border-secondary"><strong>PUT:</strong> Actualizar datos existentes.</li>
-                            <li class="list-group-item bg-transparent text-white border-secondary"><strong>DELETE:</strong> Eliminar registros.</li>
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=400&auto=format&fit=crop" class="rounded mb-3" alt="API Security">
+                        <h5 class="fw-bold text-white">Métodos HTTP</h5>
+                        <ul class="list-group list-group-flush bg-transparent text-start">
+                            <li class="list-group-item bg-transparent text-white border-secondary small">GET: Recuperar recursos.</li>
+                            <li class="list-group-item bg-transparent text-white border-secondary small">POST: Crear nuevos datos.</li>
+                            <li class="list-group-item bg-transparent text-white border-secondary small">PUT/PATCH: Actualizar.</li>
+                            <li class="list-group-item bg-transparent text-white border-secondary small">DELETE: Eliminar registros.</li>
                         </ul>
                     </div>
                 </div>
@@ -86,71 +83,57 @@
             <h2 class="section-title">Arquitectura de Microservicios</h2>
             <div class="row align-items-center">
                 <div class="col-md-7">
-                    <p>Los microservicios proponen dividir una aplicación monolítica en piezas pequeñas e independientes.</p>
-                    <h5 class="text-danger fw-bold">Ejemplo: Amazon</h5>
-                    <p>En <strong>Amazon</strong>, el carrito de compras es un microservicio y el buscador es otro. Si el buscador falla, aún puedes pagar lo que ya tienes en el carrito. Esto los hace <strong>resilientes</strong>.</p>
-                    <div class="row mt-3">
-                        <div class="col-6">
-                            <h6 class="text-danger fw-bold">Beneficios</h6>
-                            <ul class="small">
-                                <li>Escalado preciso por componente.</li>
-                                <li>Equipos autónomos y multitecnología.</li>
-                                <li>Actualizaciones rápidas sin pausas.</li>
-                            </ul>
-                        </div>
-                        <div class="col-6">
-                            <h6 class="text-danger fw-bold">Desafíos</h6>
-                            <ul class="small">
-                                <li>Dificultad de monitoreo.</li>
-                                <li>Latencia en conexiones de red.</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <p>En este enfoque, una aplicación se compone de muchos servicios pequeños e independientes. Cada uno tiene su propia tecnología y base de datos, comunicándose vía APIs REST o mensajería (Kafka).</p>
+                    <h5 class="text-danger fw-bold">Beneficios Organizativos</h5>
+                    <ul>
+                        <li><strong>Escalabilidad:</strong> Se escalan solo los servicios necesarios (ej. el carrito de Amazon).</li>
+                        <li><strong>Resiliencia:</strong> El aislamiento de fallas evita que un error detenga toda la aplicación.</li>
+                        <li><strong>Agilidad:</strong> Actualizaciones rápidas sin tocar el resto del monolito.</li>
+                    </ul>
                 </div>
                 <div class="col-md-5">
                     <div class="ratio ratio-16x9 rounded overflow-hidden shadow">
-                       <iframe width="560" height="315" src="https://www.youtube.com/embed/NBF8fN-qnjs?si=Xz1TBp8Ub8Xjq1Nw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/6_uXm9fM6A8" title="Microservicios" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="contenedorizacion" class="mb-5">
-            <h2 class="section-title">Virtualización Moderna: Contenedores</h2>
+            <h2 class="section-title">Manejo de Contenedores</h2>
             <div class="row g-4">
                 <div class="col-md-7">
-                    <p>Los <strong>contenedores</strong> son paquetes que incluyen el código de tu aplicación y TODAS sus dependencias (bibliotecas, versiones de lenguaje). Virtualizan a nivel de <strong>Sistema Operativo</strong>, lo que los hace mucho más ligeros que las máquinas virtuales tradicionales.</p>
-                    <p><strong>Docker:</strong> Permite crear imágenes portátiles estándar.</p>
-                    <p><strong>Kubernetes:</strong> Orquestador que administra miles de contenedores, reiniciándolos si fallan y escalándolos automáticamente.</p>
-                    
-                    
+                    <p>Los <strong>contenedores</strong> virtualizan a nivel de Sistema Operativo. Son mucho más ligeros que las máquinas virtuales porque comparten el kernel del anfitrión.</p>
+                    <p><strong>Docker:</strong> Herramienta líder para empaquetar software en imágenes portátiles.</p>
+                    <p><strong>Kubernetes:</strong> El orquestador que coordina y programa miles de contenedores a gran escala, asegurando alta disponibilidad.</p>
                 </div>
-                <div class="col-md-5">
-                    <div class="p-4 border-accent rounded h-100 text-center">
+                <div class="col-md-5 text-center">
+                    <div class="p-3 border-accent rounded">
                         <h5 class="text-danger fw-bold">Ubicación del Desarrollador</h5>
-                        <div class="map-container mb-3 shadow-sm rounded">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.314643534579!2d-102.3168128!3d21.9129792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee0632734133%3A0x66c897f1f021e058!2sUniversidad%20Aut%C3%B3noma%20de%20Aguascalientes!5e0!3m2!1ses!2smx!4v17000000000000" width="100%" height="180" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <div class="map-container mb-2">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.314643534579!2d-102.3168128!3d21.9129792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee0632734133%3A0x66c897f1f021e058!2sUniversidad%20Aut%C3%B3noma%20de%20Aguascalientes!5e0!3m2!1ses!2smx!4v17000000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
-                        <p class="mb-0 fw-bold">Luis Pablo Mendoza Saucedo</p>
-                        <small>UAA | Aguascalientes, México</small>
+                        <p class="mb-0 text-white fw-bold">UAA | Aguascalientes</p>
                     </div>
                 </div>
             </div>
+            
         </section>
 
         <section id="cloud" class="mb-5 p-5 rounded-4 shadow-lg" style="background: linear-gradient(145deg, #1e1e1e, #121212);">
-            <h2 class="section-title">Ecosistema .NET y Desarrollo Cloud</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <h5 class="text-white">Frameworks Profesionales</h5>
-                    <ul>
-                        <li><strong>ASP.NET Core:</strong> Multiplataforma y optimizado para la nube.</li>
-                        <li><strong>Patrón MVC:</strong> Separa Modelo, Vista y Controlador para mantenimiento eficiente.</li>
-                        <li><strong>Web Forms:</strong> Basado en eventos para creación rápida de formularios.</li>
-                    </ul>
+            <h2 class="section-title">Desarrollo para la Nube y .NET</h2>
+            <div class="row g-4 text-white">
+                <div class="col-md-4">
+                    <h5 class="fw-bold border-bottom pb-2">ASP.NET Core</h5>
+                    <p class="small">Plataforma multiplataforma optimizada para la nube y contenedores de alto rendimiento.</p>
                 </div>
-                <div class="col-md-6 text-center">
-                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=400&auto=format&fit=crop" class="img-fluid rounded shadow" alt="Cloud Development">
+                <div class="col-md-4">
+                    <h5 class="fw-bold border-bottom pb-2">Web Forms vs MVC</h5>
+                    <p class="small">Mientras Web Forms se basa en eventos, MVC separa la lógica en Modelo, Vista y Controlador.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold border-bottom pb-2">Cloud Computing</h5>
+                    <p class="small">Uso de Amazon ECS y EKS para ejecutar infraestructuras escalables sin gestionar servidores físicos.</p>
                 </div>
             </div>
         </section>
@@ -172,12 +155,12 @@
                     <input type="number" id="id" class="form-control" required>
                 </div>
                 <div class="col-md-4">
-                    <label class="form-label fw-bold">4. Carrera del Estudiante</label>
+                    <label class="form-label fw-bold">4. Carrera</label>
                     <input type="text" id="carrera" class="form-control" value="LITC" required>
                 </div>
                 <div class="col-md-4">
                     <label class="form-label fw-bold">5. Comentario Técnico</label>
-                    <input type="text" id="comentario" class="form-control" placeholder="Ej: Implementación REST..." required>
+                    <input type="text" id="comentario" class="form-control" placeholder="Ej: REST API en .NET Core" required>
                 </div>
                 <div class="col-12 text-center mt-5">
                     <button type="submit" class="btn btn-lg custom-btn shadow-lg px-5 py-3 fw-bold">FINALIZAR Y VALIDAR PROYECTO</button>
@@ -186,6 +169,20 @@
         </section>
 
     </main>
+
+    <div class="modal fade" id="modalIntro" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white border-danger">
+                <div class="modal-header">
+                    <h5 class="modal-title">Detalle del Proyecto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Sitio informativo desarrollado por <strong>Luis Pablo Mendoza Saucedo</strong> para la materia de Desarrollo Web. Entrega: 4 de marzo de 2026.
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="text-center py-5 border-top border-secondary">
         <p class="fw-bold text-white">© 2026 | LUIS PABLO MENDOZA SAUCEDO | Universidad Autónoma de Aguascalientes</p>

@@ -1,53 +1,51 @@
 document.getElementById('formularioWeb').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Extracción de los 5 CAMPOS OBLIGATORIOS
-    const campos = {
-        nombre: document.getElementById('nombre').value,
-        email: document.getElementById('correo').value,
-        id: document.getElementById('id').value,
-        carrera: document.getElementById('carrera').value,
-        comentario: document.getElementById('comentario').value
-    };
+    // Extracción de los 5 CAMPOS
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('correo').value;
+    const matricula = document.getElementById('id').value;
+    const carrera = document.getElementById('carrera').value;
+    const comentario = document.getElementById('comentario').value;
     
     const btn = e.target.querySelector('button');
     
-    // VALIDACIÓN 1: Nombre completo (Mínimo 10 caracteres)
-    if (campos.nombre.length < 10) {
+    // VALIDACIÓN 1: Nombre (mínimo 10 caracteres)
+    if (nombre.length < 10) {
         alert("⚠️ Por favor, ingresa tu nombre completo.");
         return;
     }
 
-    // VALIDACIÓN 2: Correo institucional UAA
-    if (!campos.email.endsWith('@alumno.uaa.mx')) {
-        alert("⚠️ Error: Solo se permiten correos @alumno.uaa.mx.");
+    // VALIDACIÓN 2: Correo institucional
+    if (!email.endsWith('@alumno.uaa.mx')) {
+        alert("⚠️ Error: Solo se permite el correo institucional (@alumno.uaa.mx)");
         return;
     }
     
-    // VALIDACIÓN 3: Matrícula (Mínimo 5 dígitos)
-    if (campos.id.length < 5) {
-        alert("⚠️ La matrícula ingresada es inválida.");
+    // VALIDACIÓN 3: Matrícula (mínimo 5 dígitos)
+    if (matricula.length < 5) {
+        alert("⚠️ La matrícula ingresada es demasiado corta.");
         return;
     }
 
-    // VALIDACIÓN 4: Carrera (No vacía)
-    if (campos.carrera.trim() === "") {
-        alert("⚠️ El campo de carrera es obligatorio.");
+    // VALIDACIÓN 4: Carrera (no vacía)
+    if (carrera.trim() === "") {
+        alert("⚠️ Especifica tu carrera.");
         return;
     }
 
-    // VALIDACIÓN 5: Comentario Técnico (Mínimo 5 caracteres)
-    if (campos.comentario.length < 5) {
-        alert("⚠️ El comentario técnico es demasiado corto.");
+    // VALIDACIÓN 5: Comentario técnico (mínimo 5 caracteres)
+    if (comentario.length < 5) {
+        alert("⚠️ El comentario técnico es obligatorio.");
         return;
     }
     
-    // Feedback final de éxito
-    btn.innerHTML = "PROYECTO VALIDADO CON ÉXITO ✅";
-    btn.classList.replace('btn-lg', 'btn-success');
+    // Éxito
+    btn.innerHTML = "PROYECTO VALIDADO ✅";
+    btn.style.backgroundColor = "#198754";
     btn.disabled = true;
     
     setTimeout(() => {
-        alert("¡Felicidades Luis Pablo Mendoza Saucedo! Los 5 campos han sido validados correctamente.");
-    }, 400);
+        alert("¡Éxito Luis Pablo Mendoza Saucedo! Los 5 campos han sido validados para tu entrega.");
+    }, 300);
 });
