@@ -1,0 +1,78 @@
+:root {
+    --oscuro: #121212;
+    --gris-card: #1E1E1E;
+    --rojo-p: #BF4136;
+    --rojo-b: #D93D3D;
+    --rojo-o: #8C3A3A;
+    --blanco: #FFFFFF;
+}
+
+body {
+    background-color: var(--oscuro);
+    color: var(--blanco); /* TEXTO BLANCO PURO */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+}
+
+/* NAVBAR */
+.custom-navbar {
+    background-color: rgba(18, 18, 18, 0.98) !important;
+    border-bottom: 3px solid var(--rojo-p);
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* CARRUSEL */
+.overlay-img {
+    height: 65vh;
+    object-fit: cover;
+    filter: brightness(25%);
+}
+.slide-content {
+    bottom: 25%;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 20px rgba(0,0,0,1);
+}
+
+/* TÍTULOS */
+.section-title {
+    color: var(--rojo-b);
+    border-left: 8px solid var(--rojo-p);
+    padding-left: 20px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* CARDS Y HOVER */
+.custom-card {
+    background-color: var(--gris-card);
+    transition: transform 0.4s ease;
+}
+.custom-card:hover { transform: translateY(-10px); }
+
+.hover-glow:hover {
+    box-shadow: 0 0 15px var(--rojo-p);
+    border-color: var(--rojo-p) !important;
+    transition: 0.3s;
+}
+
+/* FORMULARIO */
+.form-wrapper {
+    background: #181818;
+    border: 3px solid var(--rojo-o);
+}
+.custom-btn {
+    background-color: var(--rojo-p);
+    color: var(--blanco);
+    font-family: 'Orbitron', sans-serif;
+    transition: 0.3s;
+}
+.custom-btn:hover { background-color: var(--rojo-b); transform: scale(1.05); }
+
+/* MISC */
+.bg-glass {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(15px);
+}
+.border-accent { border: 2px dashed var(--rojo-o); }
+p, li { color: var(--blanco); }
