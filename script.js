@@ -1,7 +1,7 @@
 document.getElementById('formularioWeb').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    // Extracción de los 5 CAMPOS
+    // Captura de los 5 CAMPOS OBLIGATORIOS
     const nombre = document.getElementById('nombre').value;
     const email = document.getElementById('correo').value;
     const matricula = document.getElementById('id').value;
@@ -10,42 +10,38 @@ document.getElementById('formularioWeb').addEventListener('submit', function(e) 
     
     const btn = e.target.querySelector('button');
     
-    // VALIDACIÓN 1: Nombre (mínimo 10 caracteres)
+    // VALIDACIONES
     if (nombre.length < 10) {
         alert("⚠️ Por favor, ingresa tu nombre completo.");
         return;
     }
 
-    // VALIDACIÓN 2: Correo institucional
     if (!email.endsWith('@alumno.uaa.mx')) {
-        alert("⚠️ Error: Solo se permite el correo institucional (@alumno.uaa.mx)");
+        alert("⚠️ Solo se permiten correos institucionales (@alumno.uaa.mx).");
         return;
     }
     
-    // VALIDACIÓN 3: Matrícula (mínimo 5 dígitos)
     if (matricula.length < 5) {
-        alert("⚠️ La matrícula ingresada es demasiado corta.");
+        alert("⚠️ La matrícula ingresada no es válida.");
         return;
     }
 
-    // VALIDACIÓN 4: Carrera (no vacía)
-    if (carrera.trim() === "") {
-        alert("⚠️ Especifica tu carrera.");
+    if (carrera.trim().length === 0) {
+        alert("⚠️ Debes especificar tu carrera.");
         return;
     }
 
-    // VALIDACIÓN 5: Comentario técnico (mínimo 5 caracteres)
-    if (comentario.length < 5) {
-        alert("⚠️ El comentario técnico es obligatorio.");
+    if (comentario.trim().length < 5) {
+        alert("⚠️ El comentario técnico es obligatorio para la validación.");
         return;
     }
     
-    // Éxito
-    btn.innerHTML = "PROYECTO VALIDADO ✅";
+    // Respuesta visual de éxito
+    btn.innerHTML = "PROYECTO VALIDADO CON ÉXITO ✅";
     btn.style.backgroundColor = "#198754";
     btn.disabled = true;
     
     setTimeout(() => {
-        alert("¡Éxito Luis Pablo Mendoza Saucedo! Los 5 campos han sido validados para tu entrega.");
-    }, 300);
+        alert("¡Felicidades Luis Pablo Mendoza Saucedo! Los 5 campos han sido validados para tu entrega de hoy.");
+    }, 400);
 });

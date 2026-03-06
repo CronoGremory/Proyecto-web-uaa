@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingeniería Web de Vanguardia | Luis Pablo Mendoza Saucedo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">LUIS PABLO MENDOZA | LITC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-uppercase small fw-bold">
+                    <li class="nav-item"><a class="nav-link" href="#apis">1. Ingeniería API</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#microservicios">2. Microservicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#virtualizacion">3. Virtualización</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cloud">4. Ecosistema .NET</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#docker-deep">5. Docker Deep-Dive</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#validacion">Validación</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carrusel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1600" class="d-block w-100 overlay-img" alt="Desarrollo Backend">
+                <div class="carousel-caption d-md-block slide-content text-start">
+                    <h1 class="display-2 fw-bold text-white">Ecosistemas Web Modernos</h1>
+                    <p class="lead text-white">Un análisis exhaustivo de la interconectividad, escalabilidad y virtualización de software.</p>
+                    <p class="text-white">Desarrollador: <strong>Luis Pablo Mendoza Saucedo</strong></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.pexels.com/photos/3861932/pexels-photo-3861932.jpeg?auto=compress&cs=tinysrgb&w=1600" class="d-block w-100 overlay-img" alt="Cloud Computing">
+                <div class="carousel-caption d-md-block slide-content text-start">
+                    <h1 class="display-2 fw-bold text-white">Contenedores y Cloud</h1>
+                    <p class="lead text-white">Implementación de Docker y orquestación masiva para arquitecturas de alto rendimiento.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <main class="container my-5 text-white">
+
+        <section id="apis" class="mb-5 fade-in">
+            <h2 class="section-title">1. Ingeniería de Web APIs: Estándares y Pasos de Creación</h2>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <p>Una <strong>Web API</strong> es una interfaz que permite el intercambio de datos entre programas de software bajo estándares definidos, actuando como una capa de abstracción para que sistemas heterogéneos se comuniquen mediante HTTP.</p>
+                    
+                    <h5 class="text-danger mt-4 fw-bold">Metodología Detallada para Crear una Web API:</h5>
+                    <p>De acuerdo con los manuales de ingeniería de software:</p>
+                    <ol class="mb-4">
+                        <li><strong>Definición de Requerimientos:</strong> Identificar qué recursos (datos) se expondrán y los permisos de acceso de los usuarios finales.</li>
+                        <li><strong>Selección del Estándar Arquitectónico:</strong> Decidir entre la flexibilidad y ligereza de <strong>REST</strong> (usando JSON) o la rigidez y robustez transaccional de <strong>SOAP</strong> (usando XML).</li>
+                        <li><strong>Diseño de la Interfaz (Endpoints):</strong> Definir URIs lógicas y descriptivas que identifiquen los recursos de forma única dentro del servidor para facilitar el consumo.</li>
+                        <li><strong>Capa de Seguridad (JWT):</strong> Implementar <strong>JSON Web Token</strong>, el estándar (RFC 7519) para la transmisión segura de información. El token debe contener Header, Payload y Signature para garantizar la integridad.</li>
+                        <li><strong>Desarrollo y Pruebas:</strong> Codificar la lógica de negocio y realizar pruebas unitarias para validar los códigos de estado HTTP (200, 201, 404, 500).</li>
+                        <li><strong>Documentación y Publicación:</strong> Exponer la API mediante herramientas como <strong>Swagger</strong> para permitir que terceros la integren fácilmente.</li>
+                    </ol>
+
+                    <h5 class="text-danger mt-4 fw-bold">SOAP vs REST: Un Análisis Profundo</h5>
+                    <p><strong>SOAP:</strong> Es un protocolo basado en XML independiente de la plataforma. Ofrece estándares estrictos como WS-Security, lo que lo hace ideal para transacciones bancarias.</p>
+                    <p><strong>REST:</strong> Es una arquitectura que utiliza JSON y permite el uso de caché para mejorar drásticamente el rendimiento de red. Es la opción preferida para aplicaciones móviles y sitios web modernos.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card custom-card p-4 border-danger h-100 shadow-lg">
+                        <button class="btn btn-danger mb-3 fw-bold" data-bs-toggle="modal" data-bs-target="#modalSeguridad">Detalles Técnicos JWT</button>
+                        <h5 class="fw-bold mb-3">Métodos HTTP Estándar</h5>
+                        <ul class="list-group list-group-flush bg-transparent small text-white">
+                            <li class="list-group-item bg-transparent text-white border-secondary"><strong>GET:</strong> Solicitar y recuperar información del servidor.</li>
+                            <li class="list-group-item bg-transparent text-white border-secondary"><strong>POST:</strong> Enviar datos para crear un nuevo recurso.</li>
+                            <li class="list-group-item bg-transparent text-white border-secondary"><strong>PUT:</strong> Actualizar un recurso existente de forma completa.</li>
+                            <li class="list-group-item bg-transparent text-white border-secondary"><strong>DELETE:</strong> Eliminar un recurso específico del servidor.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="microservicios" class="mb-5 bg-glass p-5 rounded-4 shadow">
+            <h2 class="section-title">2. Arquitectura de Microservicios</h2>
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <p>Los microservicios representan un cambio de paradigma hacia el desarrollo nativo de la nube. En lugar de un monolito pesado, la aplicación se divide en servicios pequeños e independientes.</p>
+                    <h5 class="text-danger fw-bold">Beneficios Organizativos y de Negocio:</h5>
+                    <ul class="mb-4">
+                        <li><strong>Despliegue Independiente:</strong> Permite actualizaciones continuas (CI/CD) sin detener todo el sistema.</li>
+                        <li><strong>Escalado Horizontal Selectivo:</strong> Se escalan solo los servicios con mayor carga, optimizando el uso de CPU y memoria.</li>
+                        <li><strong>Resiliencia de Software:</strong> El aislamiento de fallas garantiza que un error en un componente no provoque una caída total.</li>
+                    </ul>
+                    <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#modalBeneficios">Ver Desafíos de MS</button>
+                </div>
+                <div class="col-md-5">
+                    <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
+                        <iframe src="https://www.youtube.com/embed/6_uXm9fM6A8" title="Microservicios" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="virtualizacion" class="mb-5">
+            <h2 class="section-title">3. Virtualización de Sistemas Operativos</h2>
+            <div class="row g-4">
+                <div class="col-md-7">
+                    <p>Los contenedores constituyen un mecanismo de empaquetado lógico que abstrae las aplicaciones del entorno real. A diferencia de las máquinas virtuales (VM), los contenedores virtualizan a nivel de <strong>sistema operativo</strong>, compartiendo el kernel del anfitrión.</p>
+                    <h5 class="text-danger fw-bold">Ventajas sobre las VMs Tradicionales:</h5>
+                    <ul>
+                        <li>Son extremadamente ligeros y se inician en fracciones de segundo.</li>
+                        <li>Facilitan la portabilidad: "Si corre en mi contenedor, corre en la nube".</li>
+                        <li>Permiten una mayor densidad de aplicaciones por servidor físico.</li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <div class="p-4 border-accent rounded text-center shadow-lg bg-dark">
+                        <h6 class="fw-bold text-danger">Localización del Desarrollador (UAA)</h6>
+                        <div class="map-container mb-2 rounded overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3701.3854128032!2d-102.316825!3d21.912638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429ee63f45c0887%3A0xc3f9468641505c8d!2sUniversidad%20Aut%C3%B3noma%20de%20Aguascalientes!5e0!3m2!1ses-419!2smx!4v1700000000000!5m2!1ses-419!2smx" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <small class="text-white">Luis Pablo Mendoza Saucedo | Carrera: LITC</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cloud" class="mb-5 p-5 rounded-4 shadow-lg" style="background: linear-gradient(145deg, #1e1e1e, #121212); border: 1px solid #333;">
+            <h2 class="section-title text-white">4. Ecosistema .NET y Desarrollo Cloud</h2>
+            <div class="row g-4">
+                <div class="col-md-6 border-left-red">
+                    <h5 class="text-white">ASP.NET Core y el Patrón MVC</h5>
+                    <p>Es la plataforma multiplataforma de alto rendimiento diseñada por Microsoft para la nube y contenedores. Utiliza el patrón <strong>MVC</strong> para separar responsabilidades entre Modelo (datos), Vista (interfaz) y Controlador (lógica), facilitando el mantenimiento a largo plazo.</p>
+                </div>
+                <div class="col-md-6 border-left-red">
+                    <h5 class="text-white">Despliegue y Orquestación Cloud</h5>
+                    <p>Uso de servicios como Amazon ECS y EKS para gestionar infraestructuras de contenedores sin la necesidad de administrar servidores físicos directamente. Esto habilita el despliegue en la nube híbrida con flexibilidad y portabilidad total entre proveedores como Azure y AWS.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="docker-deep" class="mb-5">
+            <h2 class="section-title">5. Punto 5: Ecosistema Docker y Flujo de Trabajo</h2>
+            <div class="row g-4 text-white">
+                <div class="col-md-12">
+                    <p><strong>Docker</strong> es una tecnología de tiempo de ejecución que empaqueta software en unidades estandarizadas llamadas contenedores. Incluyen bibliotecas, herramientas de sistema y código, eliminando el problema de "en mi computadora sí funcionaba".</p>
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="p-4 bg-secondary rounded shadow-sm hover-glow h-100">
+                                <h6 class="fw-bold text-danger">Operaciones Principales</h6>
+                                <p class="small">Uso de <strong>Docker Build</strong> para crear imágenes inmutables y <strong>Docker Desktop</strong> para administrar el ciclo de vida del desarrollo local.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-4 bg-secondary rounded shadow-sm hover-glow h-100">
+                                <h6 class="fw-bold text-danger">Distribución: Docker Hub</h6>
+                                <p class="small">Plataforma para encontrar y compartir imágenes de contenedores, permitiendo el uso de software preconfigurado de forma inmediata.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-4 bg-secondary rounded shadow-sm hover-glow h-100">
+                                <h6 class="fw-bold text-danger">Orquestación con K8s</h6>
+                                <p class="small">Mientras Docker gestiona el contenedor individual, <strong>Kubernetes</strong> orquestra clústeres masivos asegurando el escalado automático y la alta disponibilidad.</p>
+                                <button class="btn btn-danger btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalOrquestacion">Comparar Tecnologías</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="validacion" class="form-wrapper p-5 rounded-4 shadow-lg border-top border-danger border-4">
+            <h3 class="mb-4 text-center fw-bold text-white text-uppercase">Validación y Registro de Entrega</h3>
+            <p class="text-center mb-5 fw-bold text-danger">Responsable: LUIS PABLO MENDOZA SAUCEDO | LITC</p>
+            <form id="formularioWeb" class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label fw-bold text-white">1. Nombre Completo</label>
+                    <input type="text" id="nombre" class="form-control" value="Luis Pablo Mendoza Saucedo" readonly>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-bold text-white">2. Correo Institucional</label>
+                    <input type="email" id="correo" class="form-control" placeholder="usuario@alumno.uaa.mx" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-bold text-white">3. Matrícula UAA</label>
+                    <input type="number" id="id" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-bold text-white">4. Carrera (Siglas)</label>
+                    <input type="text" id="carrera" class="form-control" value="LITC" readonly>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label fw-bold text-white">5. Comentario Técnico</label>
+                    <input type="text" id="comentario" class="form-control" placeholder="Opinión sobre Docker..." required>
+                </div>
+                <div class="col-12 text-center mt-5">
+                    <button type="submit" class="btn btn-lg custom-btn shadow-lg px-5 py-3 fw-bold text-uppercase">Finalizar y Validar Entrega</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <div class="modal fade" id="modalSeguridad" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white border-danger">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white">Estructura de Seguridad JWT</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-white">Un **JWT** se compone de tres partes codificadas en Base64:</p>
+                    <ul class="text-white">
+                        <li><strong>Header:</strong> Algoritmo de firma.</li>
+                        <li><strong>Payload:</strong> Información del usuario y permisos.</li>
+                        <li><strong>Signature:</strong> Firma digital para asegurar la integridad.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalBeneficios" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white border-danger">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white">Retos de los Microservicios</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-white">
+                    <ul>
+                        <li>Mayor complejidad operativa en la gestión de red distribuida.</li>
+                        <li>Latencia latente por comunicación entre microservicios.</li>
+                        <li>Dificultad en el monitoreo y trazabilidad de peticiones.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalOrquestacion" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white border-danger">
+                <div class="modal-header">
+                    <h5 class="modal-title text-white">Docker vs Kubernetes</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-white">
+                    <p><strong>Docker Desktop:</strong> Administra contenedores individuales de forma aislada en desarrollo.</p>
+                    <p><strong>Kubernetes:</strong> Orquesta aplicaciones de nivel de producción a escala masiva.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-5 border-top border-secondary text-white">
+        <p class="fw-bold">© 2026 | LUIS PABLO MENDOZA SAUCEDO | Universidad Autónoma de Aguascalientes</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
